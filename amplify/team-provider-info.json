@@ -19,6 +19,17 @@
           "webClientId": "6rfusmhq3l43vkte4j321smbl3",
           "nativeClientId": "6rfusmhq3l43vkte4j321smbl3"
         }
+      },
+      "function": {
+        "datasource": {
+          "secretsPathAmplifyAppId": "d1tol2u7pwn286",
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/datasource-347076513737536a3454-build.zip",
+          "rdsHostname": "rds-dev-instance-1.c3lnmvdiaqqm.us-west-2.rds.amazonaws.com",
+          "rdsUsername": "master",
+          "rdsPort": "3306",
+          "rdsDatabase": "rds_dev"
+        }
       }
     }
   }

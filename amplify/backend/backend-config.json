@@ -8,6 +8,14 @@
       "serviceType": "imported"
     }
   },
+  "function": {
+    "datasource": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
   "parameters": {
     "AMPLIFY_auth_amplifyintegrationb5c10ea8_nativeClientId": {
       "usedBy": [
@@ -38,6 +46,62 @@
         {
           "category": "auth",
           "resourceName": "amplifyintegrationb5c10ea8"
+        }
+      ]
+    },
+    "AMPLIFY_function_datasource_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_datasource_rdsDatabase": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_datasource_rdsHostname": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_datasource_rdsPort": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_datasource_rdsUsername": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_datasource_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_datasource_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "datasource"
         }
       ]
     }

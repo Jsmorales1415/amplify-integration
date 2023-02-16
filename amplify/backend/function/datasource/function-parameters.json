@@ -1,0 +1,24 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "rdsHostname",
+      "environmentVariableName": "RDS_HOSTNAME"
+    },
+    {
+      "cloudFormationParameterName": "rdsUsername",
+      "environmentVariableName": "RDS_USERNAME"
+    },
+    {
+      "cloudFormationParameterName": "rdsPort",
+      "environmentVariableName": "RDS_PORT"
+    },
+    {
+      "cloudFormationParameterName": "rdsDatabase",
+      "environmentVariableName": "RDS_DATABASE"
+    }
+  ],
+  "secretNames": [
+    "RDS_PASSWORD"
+  ]
+}
