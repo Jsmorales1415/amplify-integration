@@ -1,14 +1,88 @@
 {
+  "api": {
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "amplifyintegration112db461112db461"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "AdminQueriesa85aa44c"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
-    "amplifyintegrationb5c10ea8": {
+    "amplifyintegration112db461112db461": {
       "customAuth": false,
       "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito",
-      "serviceType": "imported"
+      "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID"
+          ],
+          "category": "auth",
+          "resourceName": "amplifyintegration112db461112db461"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
     }
   },
   "function": {
+    "AdminQueriesa85aa44c": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "amplifyintegration112db461112db461"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "datasource": {
       "build": true,
       "dependsOn": [],
@@ -17,35 +91,19 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_amplifyintegrationb5c10ea8_nativeClientId": {
+    "AMPLIFY_function_AdminQueriesa85aa44c_deploymentBucketName": {
       "usedBy": [
         {
-          "category": "auth",
-          "resourceName": "amplifyintegrationb5c10ea8"
+          "category": "function",
+          "resourceName": "AdminQueriesa85aa44c"
         }
       ]
     },
-    "AMPLIFY_auth_amplifyintegrationb5c10ea8_userPoolId": {
+    "AMPLIFY_function_AdminQueriesa85aa44c_s3Key": {
       "usedBy": [
         {
-          "category": "auth",
-          "resourceName": "amplifyintegrationb5c10ea8"
-        }
-      ]
-    },
-    "AMPLIFY_auth_amplifyintegrationb5c10ea8_userPoolName": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "amplifyintegrationb5c10ea8"
-        }
-      ]
-    },
-    "AMPLIFY_auth_amplifyintegrationb5c10ea8_webClientId": {
-      "usedBy": [
-        {
-          "category": "auth",
-          "resourceName": "amplifyintegrationb5c10ea8"
+          "category": "function",
+          "resourceName": "AdminQueriesa85aa44c"
         }
       ]
     },

@@ -9,5 +9,5 @@ function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-// export default withAuthenticator(App, { variation: 'modal' });
-export default App;
+export default withAuthenticator(App, { variation: 'modal' });
+// export default App;

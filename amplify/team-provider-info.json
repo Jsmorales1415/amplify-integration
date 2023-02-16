@@ -12,14 +12,6 @@
       "AmplifyAppId": "d1tol2u7pwn286"
     },
     "categories": {
-      "auth": {
-        "amplifyintegrationb5c10ea8": {
-          "userPoolId": "us-west-2_JDgIObSTO",
-          "userPoolName": "cognito-test-dev",
-          "webClientId": "6rfusmhq3l43vkte4j321smbl3",
-          "nativeClientId": "6rfusmhq3l43vkte4j321smbl3"
-        }
-      },
       "function": {
         "datasource": {
           "secretsPathAmplifyAppId": "d1tol2u7pwn286",
@@ -29,7 +21,18 @@
           "rdsUsername": "master",
           "rdsPort": "3306",
           "rdsDatabase": "rds_dev"
+        },
+        "AdminQueriesa85aa44c": {
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/AdminQueriesa85aa44c-784864504e3634723267-build.zip"
         }
+      },
+      "auth": {
+        "amplifyintegration112db461112db461": {},
+        "userPoolGroups": {}
+      },
+      "api": {
+        "AdminQueries": {}
       }
     }
   }
