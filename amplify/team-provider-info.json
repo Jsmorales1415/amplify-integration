@@ -33,7 +33,8 @@
         "userPoolGroups": {}
       },
       "api": {
-        "AdminQueries": {}
+        "AdminQueries": {},
+        "api536f5774": {}
       }
     }
   }

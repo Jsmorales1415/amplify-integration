@@ -2,8 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
 const AWS = require('aws-sdk');
+var mysql = require('mysql');
 
 let passwordSecret;
+let connection;
 
 const connectionString = async () => {
   const ssm = new AWS.SSM({ region: process.env.REGION });
@@ -15,9 +17,6 @@ const connectionString = async () => {
     .promise();
   return parameter.Parameter.Value;
 };
-
-var mysql = require('mysql');
-let connection;
 
 // var connection = mysql.createConnection({
 //   database: process.env.RDS_DATABASE,
