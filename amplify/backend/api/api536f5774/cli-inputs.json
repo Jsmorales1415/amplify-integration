@@ -1,15 +1,19 @@
 {
   "version": 1,
   "paths": {
-    "/{proxy+}": {
-      "lambdaFunction": "AdminQueriesa85aa44c",
+    "/": {
+      "name": "/",
+      "lambdaFunction": "datasource",
       "permissions": {
-        "setting": "private",
+        "setting": "protected",
         "auth": [
           "create",
           "read",
           "update",
           "delete"
+        ],
+        "guest": [
+          "read"
         ]
       }
     }
