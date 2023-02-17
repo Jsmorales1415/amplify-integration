@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import Image from 'next/image';
-import logo from '../../public/next.svg';
 import { Inter } from '@next/font/google';
-import styles from '@/styles/Home.module.css';
 import { Auth } from 'aws-amplify';
 import { useState } from 'react';
+import { Box, Button, TextField, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +19,8 @@ export default function Home() {
   const [session, setSession] = useState(null);
   const [user, setUser] = useState(null);
   const [otp, setOtp] = useState('');
+
+  const router = useRouter();
 
   const verifyAuth = () => {
     Auth.currentAuthenticatedUser()
@@ -80,34 +81,46 @@ export default function Home() {
   };
 
   return (
-    <div className="App">
+    <Box className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{message}</p>
+        <Image
+          src="/vercel.svg"
+          alt="Vercel Logo"
+          width={100}
+          height={24}
+          priority
+        />
+        <Typography variant='h5' sx={{ my: 5 }}>{message}</Typography>
         {!user && !session && (
-          <div>
-            <input
+          <Box >
+            <TextField
+              variant="outlined"
+              sx={{ mr: 5 }}
               placeholder="Phone Number (+XX)"
               onChange={(event) => setNumber(event.target.value)}
             />
-            <button onClick={signIn}>Get OTP</button>
-          </div>
+            <Button variant='contained' onClick={signIn}>Get OTP</Button>
+          </Box>
         )}
         {!user && session && (
-          <div>
-            <input
+          <Box sx={{ mt: 5 }}>
+            <TextField
+              variant="outlined"
               placeholder="Your OTP"
               onChange={(event) => setOtp(event.target.value)}
               value={otp}
             />
-            <button onClick={verifyOtp}>Confirm </button>
-          </div>
+            <Button variant='contained' onClick={verifyOtp}>Confirm </Button>
+          </Box>
         )}
-        <div>
-          <button onClick={verifyAuth}>Am I sign in?</button>
-          <button onClick={signOut}>Sign Out</button>
-        </div>
+        <Box sx={{ mt: 5 }}>
+          <Button variant='contained' onClick={verifyAuth} sx={{ mr: 13 }}>Am I sign in?</Button>
+          <Button variant='contained' onClick={signOut}>Sign Out</Button>
+        </Box>
+        <Button variant='contained' color='success' sx={{ mt: 5}} onClick={() => {
+          router.push('/activities')
+        }}>Go to Activities</Button>
       </header>
-    </div>
+    </Box>
   );
 }

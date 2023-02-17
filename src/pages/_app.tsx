@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+// import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Auth } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
