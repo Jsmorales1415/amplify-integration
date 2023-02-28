@@ -17,11 +17,15 @@
         "datasource": {
           "secretsPathAmplifyAppId": "d1tol2u7pwn286",
           "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
-          "s3Key": "amplify-builds/datasource-6143344152364e6b3477-build.zip",
+          "s3Key": "amplify-builds/datasource-6556577a765669794d35-build.zip",
           "rdsHostname": "rds-dev-instance-1.c3lnmvdiaqqm.us-west-2.rds.amazonaws.com",
           "rdsUsername": "master",
           "rdsPort": "3306",
           "rdsDatabase": "rds_dev"
+        },
+        "AdminQueriesCustom": {
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/AdminQueriesCustom-4f4b4b437a5033726631-build.zip"
         }
       },
       "api": {
@@ -29,6 +33,19 @@
       },
       "auth": {
         "amplifyintegrationa23092e4": {
+          "userPoolId": "us-west-2_CAuFuQJXP",
+          "userPoolName": "multi-auth-dev",
+          "webClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "nativeClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "identityPoolId": "us-west-2:bf5c8170-f464-4ef2-a59a-8728d2934941",
+          "identityPoolName": "multi-auth-dev",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevAuth_Role",
+          "authRoleName": "Cognito_multiauthdevAuth_Role",
+          "unauthRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevUnauth_Role",
+          "unauthRoleName": "Cognito_multiauthdevUnauth_Role"
+        },
+        "amplifyintegration7a29f391": {
           "userPoolId": "us-west-2_CAuFuQJXP",
           "userPoolName": "multi-auth-dev",
           "webClientId": "r5k5se6a6o7lf3mbpgv55816g",

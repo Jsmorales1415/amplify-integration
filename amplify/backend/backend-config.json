@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "datasource"
+          "resourceName": "AdminQueriesCustom"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -16,7 +16,7 @@
     }
   },
   "auth": {
-    "amplifyintegrationa23092e4": {
+    "amplifyintegration7a29f391": {
       "customAuth": true,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -25,6 +25,11 @@
     }
   },
   "function": {
+    "AdminQueriesCustom": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "datasource": {
       "build": true,
       "dependsOn": [],
@@ -33,6 +38,94 @@
     }
   },
   "parameters": {
+    "AMPLIFY_auth_amplifyintegration7a29f391_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
+    "AMPLIFY_auth_amplifyintegration7a29f391_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "amplifyintegration7a29f391"
+        }
+      ]
+    },
     "AMPLIFY_auth_amplifyintegrationa23092e4_allowUnauthenticatedIdentities": {
       "usedBy": [
         {
@@ -118,6 +211,22 @@
         {
           "category": "auth",
           "resourceName": "amplifyintegrationa23092e4"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesCustom_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesCustom"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesCustom_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesCustom"
         }
       ]
     },

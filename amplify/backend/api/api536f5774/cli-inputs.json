@@ -3,18 +3,9 @@
   "paths": {
     "/": {
       "name": "/",
-      "lambdaFunction": "datasource",
+      "lambdaFunction": "AdminQueriesCustom",
       "permissions": {
-        "setting": "protected",
-        "auth": [
-          "create",
-          "read",
-          "update",
-          "delete"
-        ],
-        "guest": [
-          "read"
-        ]
+        "setting": "open"
       }
     }
   }
