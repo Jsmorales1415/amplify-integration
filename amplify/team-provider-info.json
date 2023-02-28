@@ -17,24 +17,34 @@
         "datasource": {
           "secretsPathAmplifyAppId": "d1tol2u7pwn286",
           "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+<<<<<<< Updated upstream
           "s3Key": "amplify-builds/datasource-347076513737536a3454-build.zip",
+=======
+          "s3Key": "amplify-builds/datasource-6143344152364e6b3477-build.zip",
+>>>>>>> Stashed changes
           "rdsHostname": "rds-dev-instance-1.c3lnmvdiaqqm.us-west-2.rds.amazonaws.com",
           "rdsUsername": "master",
           "rdsPort": "3306",
           "rdsDatabase": "rds_dev"
-        },
-        "AdminQueriesa85aa44c": {
-          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
-          "s3Key": "amplify-builds/AdminQueriesa85aa44c-784864504e3634723267-build.zip"
         }
       },
-      "auth": {
-        "amplifyintegration112db461112db461": {},
-        "userPoolGroups": {}
-      },
       "api": {
-        "AdminQueries": {},
         "api536f5774": {}
+      },
+      "auth": {
+        "amplifyintegrationa23092e4": {
+          "userPoolId": "us-west-2_CAuFuQJXP",
+          "userPoolName": "multi-auth-dev",
+          "webClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "nativeClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "identityPoolId": "us-west-2:bf5c8170-f464-4ef2-a59a-8728d2934941",
+          "identityPoolName": "multi-auth-dev",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevAuth_Role",
+          "authRoleName": "Cognito_multiauthdevAuth_Role",
+          "unauthRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevUnauth_Role",
+          "unauthRoleName": "Cognito_multiauthdevUnauth_Role"
+        }
       }
     }
   }
