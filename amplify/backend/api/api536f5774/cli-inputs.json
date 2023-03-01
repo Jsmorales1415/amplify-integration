@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/": {
+      "name": "/",
+      "lambdaFunction": "AdminQueriesCustom",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

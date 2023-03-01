@@ -9,15 +9,54 @@
       "UnauthRoleName": "amplify-amplifyintegration-dev-83843-unauthRole",
       "StackName": "amplify-amplifyintegration-dev-83843",
       "StackId": "arn:aws:cloudformation:us-west-2:417064415593:stack/amplify-amplifyintegration-dev-83843/3d195710-adff-11ed-9205-06152bd9aa1b",
-      "AmplifyAppId": "d1tol2u7pwn286"
+      "AmplifyAppId": "d1tol2u7pwn286",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifyintegration-dev-83843-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
+      "function": {
+        "datasource": {
+          "secretsPathAmplifyAppId": "d1tol2u7pwn286",
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/datasource-6556577a765669794d35-build.zip",
+          "rdsHostname": "rds-dev-instance-1.c3lnmvdiaqqm.us-west-2.rds.amazonaws.com",
+          "rdsUsername": "master",
+          "rdsPort": "3306",
+          "rdsDatabase": "rds_dev"
+        },
+        "AdminQueriesCustom": {
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/AdminQueriesCustom-4f4b4b437a5033726631-build.zip"
+        }
+      },
+      "api": {
+        "api536f5774": {}
+      },
       "auth": {
-        "amplifyintegrationb5c10ea8": {
-          "userPoolId": "us-west-2_JDgIObSTO",
-          "userPoolName": "cognito-test-dev",
-          "webClientId": "6rfusmhq3l43vkte4j321smbl3",
-          "nativeClientId": "6rfusmhq3l43vkte4j321smbl3"
+        "amplifyintegrationa23092e4": {
+          "userPoolId": "us-west-2_CAuFuQJXP",
+          "userPoolName": "multi-auth-dev",
+          "webClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "nativeClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "identityPoolId": "us-west-2:bf5c8170-f464-4ef2-a59a-8728d2934941",
+          "identityPoolName": "multi-auth-dev",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevAuth_Role",
+          "authRoleName": "Cognito_multiauthdevAuth_Role",
+          "unauthRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevUnauth_Role",
+          "unauthRoleName": "Cognito_multiauthdevUnauth_Role"
+        },
+        "amplifyintegration7a29f391": {
+          "userPoolId": "us-west-2_CAuFuQJXP",
+          "userPoolName": "multi-auth-dev",
+          "webClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "nativeClientId": "r5k5se6a6o7lf3mbpgv55816g",
+          "identityPoolId": "us-west-2:bf5c8170-f464-4ef2-a59a-8728d2934941",
+          "identityPoolName": "multi-auth-dev",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevAuth_Role",
+          "authRoleName": "Cognito_multiauthdevAuth_Role",
+          "unauthRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevUnauth_Role",
+          "unauthRoleName": "Cognito_multiauthdevUnauth_Role"
         }
       }
     }
