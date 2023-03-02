@@ -234,19 +234,19 @@
         }
       ]
     },
-    "AMPLIFY_function_AdminQueriesCustom_deploymentBucketName": {
+    "AMPLIFY_function_amplifyintegrationadminqueries_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "AdminQueriesCustom"
+          "resourceName": "amplifyintegrationadminqueries"
         }
       ]
     },
-    "AMPLIFY_function_AdminQueriesCustom_s3Key": {
+    "AMPLIFY_function_amplifyintegrationadminqueries_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "AdminQueriesCustom"
+          "resourceName": "amplifyintegrationadminqueries"
         }
       ]
     },
