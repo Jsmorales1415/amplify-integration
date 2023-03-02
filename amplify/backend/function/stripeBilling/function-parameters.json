@@ -1,0 +1,14 @@
+{
+  "permissions": {},
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "stripeSecretKey",
+      "environmentVariableName": "STRIPE_SECRET_KEY"
+    },
+    {
+      "cloudFormationParameterName": "redirectionDomain",
+      "environmentVariableName": "REDIRECTION_DOMAIN"
+    }
+  ]
+}
