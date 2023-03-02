@@ -3,7 +3,7 @@
   "paths": {
     "/": {
       "name": "/",
-      "lambdaFunction": "AdminQueriesCustom",
+      "lambdaFunction": "amplifyintegrationadminqueries",
       "permissions": {
         "setting": "open"
       }

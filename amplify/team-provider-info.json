@@ -23,13 +23,10 @@
           "rdsPort": "3306",
           "rdsDatabase": "rds_dev"
         },
-        "AdminQueriesCustom": {
+        "amplifyintegrationadminqueries": {
           "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
-          "s3Key": "amplify-builds/AdminQueriesCustom-4f4b4b437a5033726631-build.zip"
+          "s3Key": "amplify-builds/amplifyintegrationadminqueries-4f4b4b437a5033726631-build.zip"
         }
-      },
-      "api": {
-        "api536f5774": {}
       },
       "auth": {
         "amplifyintegrationa23092e4": {
@@ -58,6 +55,9 @@
           "unauthRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevUnauth_Role",
           "unauthRoleName": "Cognito_multiauthdevUnauth_Role"
         }
+      },
+      "api": {
+        "adminQueriesApi": {}
       }
     }
   }
