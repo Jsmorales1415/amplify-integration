@@ -13,6 +13,20 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
+    },
+    "stripeBillingApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "stripeBilling"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
     }
   },
   "auth": {
@@ -31,6 +45,12 @@
       "service": "Lambda"
     },
     "datasource": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "stripeBilling": {
       "build": true,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -283,6 +303,38 @@
         {
           "category": "function",
           "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_redirectionDomain": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_stripeSecretKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
         }
       ]
     }

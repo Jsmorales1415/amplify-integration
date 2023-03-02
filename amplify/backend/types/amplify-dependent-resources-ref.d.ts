@@ -4,6 +4,11 @@ export type AmplifyDependentResourcesAttributes = {
       "ApiId": "string",
       "ApiName": "string",
       "RootUrl": "string"
+    },
+    "stripeBillingApi": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
     }
   },
   "function": {
@@ -15,6 +20,13 @@ export type AmplifyDependentResourcesAttributes = {
       "Region": "string"
     },
     "datasource": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
+    "stripeBilling": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
       "LambdaExecutionRoleArn": "string",
