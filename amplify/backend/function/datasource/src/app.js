@@ -4,7 +4,6 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const AWS = require('aws-sdk');
 var mysql = require('mysql');
 
-let passwordSecret;
 let connection;
 
 const connectionString = async () => {
@@ -18,14 +17,6 @@ const connectionString = async () => {
   return parameter.Parameter.Value;
 };
 
-// var connection = mysql.createConnection({
-//   database: process.env.RDS_DATABASE,
-//   host: process.env.RDS_HOSTNAME,
-//   user: process.env.RDS_USERNAME,
-//   password: passwordSecret,
-//   port: process.env.RDS_PORT,
-// });
-
 (async () => {
   const cs = await connectionString();
   connection = mysql.createConnection(JSON.parse(cs));
@@ -35,7 +26,9 @@ const connectionString = async () => {
       console.error('Database connection failed: ' + err.stack);
       return;
     }
-    console.log('Connected to database.');
+    app.listen(3000, function () {
+      console.log('Server started');
+    });
   });
 })();
 
@@ -52,21 +45,13 @@ app.use(function (req, res, next) {
 });
 
 app.get('/items', function (req, res) {
-  const data = connection.query(
-    'SELECT * FROM activity',
-    function (err, result, fields) {
-      if (err) {
-        res.status(400).json({ error: 'Query failed!' });
-        throw err;
-      }
-      res.json(result);
+  connection.query('SELECT * FROM activity', function (err, result, fields) {
+    if (err) {
+      res.status(400).json({ error: 'Query failed!' });
+      throw err;
     }
-  );
-  console.log({ data });
-});
-
-app.listen(3000, function () {
-  console.log('App started');
+    res.json(result);
+  });
 });
 
 module.exports = app;
