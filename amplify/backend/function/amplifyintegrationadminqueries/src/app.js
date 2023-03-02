@@ -11,6 +11,7 @@ const bodyParser = require('body-parser');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
 
 const { CreateUser } = require('./cognitoActions');
+const { verifyPaymentSession } = require('./verifyPaymentSessionAction');
 
 // declare a new express app
 const app = express();
@@ -30,9 +31,18 @@ app.post('/createUser', async (req, res, next) => {
   const username = req.body.username;
   const email = req.body.email;
   const phone = req.body.phone;
+  const sessionId = req.body.sessionId;
 
-  if (!username || !email || !phone) {
-    const err = new Error('username, email and phone are required');
+  if (!username || !email || !phone || !sessionId) {
+    const err = new Error('username, email, phone and sessionId are required');
+    err.statusCode = 400;
+    return next(err);
+  }
+
+  const isValidPayment = await verifyPaymentSession(sessionId, email);
+
+  if (!isValidPayment) {
+    const err = new Error('Invalid Payment');
     err.statusCode = 400;
     return next(err);
   }

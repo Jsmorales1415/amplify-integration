@@ -1,6 +1,6 @@
 {
   "api": {
-    "api536f5774": {
+    "adminQueriesApi": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,7 +8,21 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "AdminQueriesCustom"
+          "resourceName": "amplifyintegrationadminqueries"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "stripeBillingApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "stripeBilling"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -25,12 +39,18 @@
     }
   },
   "function": {
-    "AdminQueriesCustom": {
+    "amplifyintegrationadminqueries": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
     "datasource": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "stripeBilling": {
       "build": true,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -230,6 +250,22 @@
         }
       ]
     },
+    "AMPLIFY_function_amplifyintegrationadminqueries_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyintegrationadminqueries"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifyintegrationadminqueries_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyintegrationadminqueries"
+        }
+      ]
+    },
     "AMPLIFY_function_datasource_deploymentBucketName": {
       "usedBy": [
         {
@@ -283,6 +319,38 @@
         {
           "category": "function",
           "resourceName": "datasource"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_redirectionDomain": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeBilling_stripeSecretKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeBilling"
         }
       ]
     }

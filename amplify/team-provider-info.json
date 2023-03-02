@@ -26,10 +26,22 @@
         "AdminQueriesCustom": {
           "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
           "s3Key": "amplify-builds/AdminQueriesCustom-4f4b4b437a5033726631-build.zip"
+        },
+        "amplifyintegrationadminqueries": {
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/amplifyintegrationadminqueries-5a2b5077395967635557-build.zip"
+        },
+        "stripeBilling": {
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/stripeBilling-496465766d6852657832-build.zip",
+          "stripeSecretKey": "sk_test_51MdvCBArV7iwdpOIi41f8Bp3Txu7T2aNjy5AjawuqPJtAObaQJ8rKlFpfN7eospDjH1em4GNyzqVrpi6NmgQHYaP00Ar5dXz9U",
+          "redirectionDomain": "https://mobohubb-billing-module-eeseyypkl-fullstacksolvers.vercel.app"
         }
       },
       "api": {
-        "api536f5774": {}
+        "api536f5774": {},
+        "adminQueriesApi": {},
+        "stripeBillingApi": {}
       },
       "auth": {
         "amplifyintegrationa23092e4": {
