@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"10.7.3\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"10.8.1\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -14,6 +14,12 @@
       "Type": "String"
     },
     "s3Key": {
+      "Type": "String"
+    },
+    "stripeSecretKey": {
+      "Type": "String"
+    },
+    "redirectionDomain": {
       "Type": "String"
     }
   },
@@ -47,12 +53,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "AdminQueriesCustom",
+            "stripeBilling",
             {
               "Fn::Join": [
                 "",
                 [
-                  "AdminQueriesCustom",
+                  "stripeBilling",
                   "-",
                   {
                     "Ref": "env"
@@ -69,6 +75,12 @@
             },
             "REGION": {
               "Ref": "AWS::Region"
+            },
+            "STRIPE_SECRET_KEY": {
+              "Ref": "stripeSecretKey"
+            },
+            "REDIRECTION_DOMAIN": {
+              "Ref": "redirectionDomain"
             }
           }
         },
@@ -89,12 +101,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "amplifyintegrationLambdaRole91e1081f",
+            "amplifyintegrationLambdaRole6f5847bd",
             {
               "Fn::Join": [
                 "",
                 [
-                  "amplifyintegrationLambdaRole91e1081f",
+                  "amplifyintegrationLambdaRole6f5847bd",
                   "-",
                   {
                     "Ref": "env"

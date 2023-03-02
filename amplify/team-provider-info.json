@@ -23,13 +23,16 @@
           "rdsPort": "3306",
           "rdsDatabase": "rds_dev"
         },
-        "AdminQueriesCustom": {
+        "amplifyintegrationadminqueries": {
           "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
-          "s3Key": "amplify-builds/AdminQueriesCustom-4f4b4b437a5033726631-build.zip"
+          "s3Key": "amplify-builds/amplifyintegrationadminqueries-4f4b4b437a5033726631-build.zip"
+        },
+        "stripeBilling": {
+          "stripeSecretKey": "sk_test_51MdvCBArV7iwdpOIi41f8Bp3Txu7T2aNjy5AjawuqPJtAObaQJ8rKlFpfN7eospDjH1em4GNyzqVrpi6NmgQHYaP00Ar5dXz9U",
+          "redirectionDomain": "http://localhost:5173/",
+          "deploymentBucketName": "amplify-amplifyintegration-dev-83843-deployment",
+          "s3Key": "amplify-builds/stripeBilling-496465766d6852657832-build.zip"
         }
-      },
-      "api": {
-        "api536f5774": {}
       },
       "auth": {
         "amplifyintegrationa23092e4": {
@@ -58,6 +61,10 @@
           "unauthRoleArn": "arn:aws:iam::417064415593:role/Cognito_multiauthdevUnauth_Role",
           "unauthRoleName": "Cognito_multiauthdevUnauth_Role"
         }
+      },
+      "api": {
+        "adminQueriesApi": {},
+        "stripeBillingApi": {}
       }
     }
   }
