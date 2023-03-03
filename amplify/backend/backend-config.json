@@ -250,6 +250,22 @@
         }
       ]
     },
+    "AMPLIFY_function_amplifyintegrationadminqueries_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyintegrationadminqueries"
+        }
+      ]
+    },
+    "AMPLIFY_function_amplifyintegrationadminqueries_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "amplifyintegrationadminqueries"
+        }
+      ]
+    },
     "AMPLIFY_function_datasource_deploymentBucketName": {
       "usedBy": [
         {
