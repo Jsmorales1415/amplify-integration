@@ -7,6 +7,7 @@ import {
   GridColDef,
   DataGridProProps,
 } from '@mui/x-data-grid-pro';
+import { Link } from '@mui/material';
 
 const MemoizedRow = memo(GridRow);
 
@@ -42,7 +43,18 @@ export default function DataGridProDemo() {
     { field: 'name', headerName: 'Name', width: 250 },
     { field: 'address', headerName: 'Address', width: 250 },
     { field: 'email', headerName: 'Email', width: 250 },
-    { field: 'resource', headerName: 'Resource', width: 250 },
+    {
+      field: 'resource',
+      headerName: 'Resource',
+      width: 250,
+      renderCell(params) {
+        return (
+          <Link href={params.value} target='_blank'>
+            View location
+          </Link>
+        );
+      },
+    },
   ];
   console.log({ currentData });
 
