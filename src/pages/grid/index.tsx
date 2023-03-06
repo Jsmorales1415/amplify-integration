@@ -21,7 +21,7 @@ const useFetch = () => {
   const [currentData, setCurrentData] = useState<IUser[]>([]);
 
   const fetchUsers = async () => {
-    const response = await fetch('http://localhost:3000/usersData');
+    const response = await fetch('http://localhost:3001/usersData');
     const { users } = await response.json();
     setCurrentData((prev) => [...prev, ...users]);
   };
@@ -40,6 +40,9 @@ export default function DataGridProDemo() {
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID' },
     { field: 'name', headerName: 'Name', width: 250 },
+    { field: 'address', headerName: 'Address', width: 250 },
+    { field: 'email', headerName: 'Email', width: 250 },
+    { field: 'resource', headerName: 'Resource', width: 250 },
   ];
   console.log({ currentData });
 
