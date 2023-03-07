@@ -6,8 +6,18 @@ import {
   GridColumnHeaders,
   GridColDef,
   DataGridProProps,
+  GridToolbarContainer,
 } from '@mui/x-data-grid-pro';
 import { Link } from '@mui/material';
+import { ExportButton } from '../../components/excel-export/export-button';
+
+const CustomToolbar = (props: any) => {
+  return (
+    <GridToolbarContainer {...props}>
+      <ExportButton />
+    </GridToolbarContainer>
+  );
+};
 
 const MemoizedRow = memo(GridRow);
 
@@ -81,6 +91,7 @@ export default function DataGridProDemo() {
           components={{
             Row: MemoizedRow,
             ColumnHeaders: MemoizedColumnHeaders,
+            Toolbar: CustomToolbar,
           }}
           onRowsScrollEnd={handleOnRowsScrollEnd}
         />
