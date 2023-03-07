@@ -1,8 +1,8 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
-import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
-import '../../configureAmplify';
+// import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
+// import '@aws-amplify/ui-react/styles.css';
+// import '../../configureAmplify';
 import { Box, Button, Typography } from '@mui/material';
 
 const components = {
@@ -10,10 +10,10 @@ const components = {
     Header() {
       return (
         <Typography
-          variant='h2'
-          fontWeight='bold'
-          textAlign='center'
-          color='black'
+          variant="h2"
+          fontWeight="bold"
+          textAlign="center"
+          color="black"
           pt={5}
         >
           Sign In
@@ -23,10 +23,10 @@ const components = {
     Footer() {
       const { toResetPassword } = useAuthenticator();
       return (
-        <Box textAlign='center' pb={5} px={4}>
+        <Box textAlign="center" pb={5} px={4}>
           <Button
             onClick={toResetPassword}
-            variant='text'
+            variant="text"
             sx={{ textTransform: 'none' }}
             fullWidth
           >
@@ -40,10 +40,10 @@ const components = {
     Header() {
       return (
         <Typography
-          variant='h3'
-          fontWeight='bold'
-          textAlign='center'
-          color='black'
+          variant="h3"
+          fontWeight="bold"
+          textAlign="center"
+          color="black"
           pt={5}
           pb={3}
         >
@@ -56,14 +56,14 @@ const components = {
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <Authenticator
-      // formFields={formFields}
-      components={components}
-      hideSignUp={true}
-      variation='modal'
-    >
-      <Component {...pageProps} />
-    </Authenticator>
+    // <Authenticator
+    // formFields={formFields}
+    // components={components}
+    // hideSignUp={true}
+    // variation="modal"
+    // >
+    <Component {...pageProps} />
+    // </Authenticator>
   );
 }
 
