@@ -12,7 +12,9 @@ app.use(awsServerlessExpressMiddleware.eventContext());
 app.use(cors({ origin: '*' }));
 
 const REDIRECTION_DOMAIN = process.env.REDIRECTION_DOMAIN;
-const stripeProvider = stripe(process.env.STRIPE_SECRET_KEY);
+const stripeProvider = stripe(
+  'sk_test_51Me5OvAqTwCJPtzIiXtDNClkbITpnzbClLpl9ZTXh3qdhgAH5B4BsqYzp2NbgpXfAMX6X3LmRrPoHmI7nJgvyaYe00DZIEvsff'
+);
 
 //-----------Get products--------------------
 app.get('/products', async (req, res) => {
@@ -69,15 +71,15 @@ app.post('/create-portal-session', async (req, res) => {
   try {
     // For demonstration purposes, we're using the Checkout session to retrieve the customer ID.
     // Typically this is stored alongside the authenticated user in your database.
-    const { session_id } = req.body;
-    const checkoutSession = await stripe.checkout.sessions.retrieve(session_id);
+    const { customerId } = req.body;
+    // const checkoutSession = await stripe.checkout.sessions.retrieve(session_id);
 
     // This is the url to which the customer will be redirected when they are done
     // managing their billing with the portal.
     const returnUrl = REDIRECTION_DOMAIN;
 
-    const portalSession = await stripe.billingPortal.sessions.create({
-      customer: checkoutSession.customer,
+    const portalSession = await stripeProvider.billingPortal.sessions.create({
+      customer: customerId,
       return_url: returnUrl,
     });
 
@@ -100,7 +102,7 @@ app.get('/retrieve-session', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('Server Connected');
 });
 

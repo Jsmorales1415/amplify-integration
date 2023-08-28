@@ -1,8 +1,8 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
-// import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
+import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
 // import '@aws-amplify/ui-react/styles.css';
-// import '../../configureAmplify';
+import '../../configureAmplify';
 import { Box, Button, Typography } from '@mui/material';
 
 const components = {
@@ -56,14 +56,14 @@ const components = {
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    // <Authenticator
-    // formFields={formFields}
-    // components={components}
-    // hideSignUp={true}
-    // variation="modal"
-    // >
-    <Component {...pageProps} />
-    // </Authenticator>
+    <Authenticator
+      // formFields={formFields}
+      components={components}
+      hideSignUp={true}
+      variation="modal"
+    >
+      <Component {...pageProps} />
+    </Authenticator>
   );
 }
 
